@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <h1 class="centralizar" id="titulo">CALCULATOR</h1>
+        <p class="centralizar" id="subtitulo">Selecione sua configuração abaixo:</p>
+        <br>
+    </header>
+
+<section class="container">
+    <form  class="formularioopcoes">
+
+    <label for="memoria">Memória:</label>
+    <select id="memoria" onchange="exibirValoresMemoria()">
+        <option selected>selecione uma opção</option>
+        <option value="4gb">4 GB</option>
+        <option value="8gb">8 GB</option>
+        <option value="16gb">16 GB</option>
+        <option value="32gb">32 GB</option>
+    </select>
+    
+    <label for="nucleos">Núcleos:</label>
+    <select id="nucleos" onchange="exibirValoresNucleo()">
+        <option selected>selecione uma opção</option>
+        <option value="dual-core">Dual Core</option>
+        <option value="quad-core">Quad Core</option>
+        <option value="octa-core">Octa Core</option>
+     </select>
+
+    <label for="sistema">Sistema Operacional:</label>
+    <select id="sistema">
+        <option selected>selecione uma opção</option>
+        <option value="Windows">Microsoft Windows</option>
+        <option value="MacOS">MacOS</option>
+        <option value="Linux">Linux</option>
+    </select>
+    <button class="botao" type="button" onclick="mostrarEscolhas()">Enviar</button>
+    <p id="resultado"></p>
+    
+    </form>
+</section>
+
+<!-- <p class="centralizar padding" id="custo">Valor total:</p> -->
+<p class="centralizar"><strong>VR mais cara e mais economica:</strong></p>
+<section class="containerParagrafo centralizar">
+        <div>
+<p id="maiorMemoria">Maior valor: </p>
+<p id="menorMemoria">Menor valor: </p>
+</div>
+
+<div>
+<p id="maiorNucleo">Maior valor: </p>
+<p id="menorNucleo">Menor valor: </p>
+</div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
