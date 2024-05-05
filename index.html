@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULATOR</title>
+    <title>VR COST CALCULATOR</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+</head>
+
 <body>
     <header>
-        <h1 class="centralizar" id="titulo">CALCULATOR</h1>
+        <h1 class="centralizar" id="titulo">VR COST CALCULATOR</h1>
         <p class="centralizar" id="subtitulo">Selecione sua configuração abaixo:</p>
         <br>
     </header>
 
-<section class="container">
+<main>    
+    <section class="container">
     <form  class="formularioopcoes">
 
     <label for="memoria">Memória:</label>
@@ -40,38 +42,37 @@
         <option value="MacOS">MacOS</option>
         <option value="Linux">Linux</option>
     </select>
-    <button class="botao" type="button" onclick="mostrarEscolhas()">Enviar</button>
+    <button class="botao" type="button" onclick="mostrarEscolhas()">Registrar</button>
     <p id="resultado"></p>
     
     </form>
-</section>
+    </section>
+</main>
 
-<!-- <p class="centralizar padding" id="custo">Valor total:</p> -->
-<p class="centralizar"><strong>VR mais cara e mais economica:</strong></p>
+<p class="centralizar"><strong>Confira abaixo a VR mais cara e mais econômica:</strong></p>
 <section class="containerParagrafo centralizar">
-        <div>
-<p id="maiorMemoria">Maior valor: </p>
-<p id="menorMemoria">Menor valor: </p>
-</div>
+    <div>
+        <p id="maiorMemoria">Maior valor: </p>
+        <p id="menorMemoria">Menor valor: </p>
+    </div>
 
-<div>
-<p id="maiorNucleo">Maior valor: </p>
-<p id="menorNucleo">Menor valor: </p>
-</div>
+    <div>
+        <p id="maiorNucleo">Maior valor: </p>
+        <p id="menorNucleo">Menor valor: </p>
+    </div>
 </section>
 
-<hr>
-<section class="media containerCollum">
+
+<section class="media containerCollum marginbottom">
     <button class="botao" onclick="calcularQuandoClicadoMemoria()">Calcular Média Memória</button>
     <p id="mediamemoria"></p>
 
-
-    <button class="botao" onclick="calcularQuandoClicadoNucleo()">Calcular Média Núcleo</button>
+    <button class="botao" onclick="calcularQuandoClicadoNucleo()">Calcular Média Núcleos</button>
     <p id="medianucleo"></p>
-
 </section>
 
 
-    <script src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>

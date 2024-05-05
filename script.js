@@ -1,3 +1,4 @@
+//Função mostrar as escolhas em tela
 function mostrarEscolhas() {
     var memoria = document.getElementById("memoria").value;
     var nucleos = document.getElementById("nucleos").value;
@@ -8,7 +9,7 @@ function mostrarEscolhas() {
     document.getElementById("resultado").innerHTML = "<strong>Você selecionou:<br></strong>" + resultado;
   }
 
-
+//Função valor memória
 function exibirValoresMemoria() {
     var selectElement = document.getElementById("memoria");
     var selectedOption = selectElement.value;
@@ -45,7 +46,7 @@ function exibirValoresMemoria() {
     document.getElementById("menorMemoria").innerHTML = "Menor valor Memória: " + "R$ " + min;
 }
 
-
+//Função valor dos núcleos
 function exibirValoresNucleo() {
     var selectElement = document.getElementById("nucleos");
     var selectedOption = selectElement.value;
@@ -85,6 +86,7 @@ function calcularMediaMemoria(a, b, c) {
     return media;
 }
 
+//Função clique
 function calcularQuandoClicadoMemoria() {
     var selectElement = document.getElementById("memoria");
     var selectedOption = selectElement.value;
@@ -110,7 +112,7 @@ function calcularQuandoClicadoMemoria() {
     } 
 
     var media = calcularMediaMemoria(a, b, c); 
-    document.getElementById("mediamemoria").innerHTML = ("O valor médio da memória nesta configuração é:" + media);
+    document.getElementById("mediamemoria").innerHTML = ("O valor médio da memória nesta configuração é: " + "R$ "  + media);
 }
 
 
@@ -123,7 +125,7 @@ function calcularMediaNucleo(a, b, c) {
     return media;
 }
 
-
+//Função clique referente Núcleo
 function calcularQuandoClicadoNucleo() {
     var selectElement = document.getElementById("nucleos");
     var selectedOption = selectElement.value;
@@ -144,6 +146,6 @@ function calcularQuandoClicadoNucleo() {
     } 
 
     var media = calcularMediaNucleo(a, b, c); 
-    document.getElementById("medianucleo").innerHTML = ("O valor médio da memória nesta configuração é:" + media);
+    document.getElementById("medianucleo").innerHTML = ("O valor médio dos núcleos nesta configuração é: " + "R$ " + media);
 }
 
