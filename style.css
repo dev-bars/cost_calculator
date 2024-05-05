@@ -37,9 +37,17 @@
     justify-content: center;
 }
 
+.containerCollum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .containerParagrafo{
     display: flex;
-    background-color: #a19fa7;
+    background-color: #e2e1e2;
     gap: 100px;
 }
 

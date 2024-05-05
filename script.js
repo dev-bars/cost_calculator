@@ -16,22 +16,22 @@ function exibirValoresMemoria() {
     var a, b, c;
 
     if (selectedOption === "4gb") {
-        a = 100,88;
-        b = 200,73;
-        c = 300,50;
+        a = 100;
+        b = 200;
+        c = 300;
         
     } else if (selectedOption === "8gb") {
-        a = 200,19;
-        b = 150,15;
-        c = 180,88;
+        a = 200;
+        b = 300;
+        c = 400;
     } else if (selectedOption === "16gb") {
-        a = 300,26;
-        b = 220,49;
-        c = 250,88;
+        a = 300;
+        b = 400;
+        c = 500;
     } else if (selectedOption === "32gb") {
-        a = 400,75;
-        b = 320,19;
-        c = 450,88;
+        a = 400;
+        b = 500;
+        c = 600;
     } 
 
     // Encontrar o valor mais alto
@@ -57,13 +57,13 @@ function exibirValoresNucleo() {
         b = 200;
         c = 300;
     } else if (selectedOption === "quad-core") {
-        a = 200;
-        b = 150;
-        c = 180;
+        a = 400;
+        b = 500;
+        c = 600;
     } else if (selectedOption === "octa-core") {
-        a = 300;
-        b = 220;
-        c = 250;
+        a = 600;
+        b = 700;
+        c = 900;
     } 
 
     // Encontrar o valor mais alto
@@ -77,4 +77,73 @@ function exibirValoresNucleo() {
     document.getElementById("menorNucleo").innerHTML = "Menor valor Núcleo: " + "R$ " + min;
 }
 
+
+//Função calcular a média da Memória
+function calcularMediaMemoria(a, b, c) {
+    var soma = a + b + c;
+    var media = soma / 3;
+    return media;
+}
+
+function calcularQuandoClicadoMemoria() {
+    var selectElement = document.getElementById("memoria");
+    var selectedOption = selectElement.value;
+    var a, b, c;
+
+    if (selectedOption === "4gb") {
+        a = 100;
+        b = 200;
+        c = 300;
+        
+    } else if (selectedOption === "8gb") {
+        a = 200;
+        b = 300;
+        c = 400;
+    } else if (selectedOption === "16gb") {
+        a = 300;
+        b = 400;
+        c = 500;
+    } else if (selectedOption === "32gb") {
+        a = 400;
+        b = 500;
+        c = 600;
+    } 
+
+    var media = calcularMediaMemoria(a, b, c); 
+    document.getElementById("mediamemoria").innerHTML = ("O valor médio da memória nesta configuração é:" + media);
+}
+
+
+
+
+//Função calcular a do Núcleo
+function calcularMediaNucleo(a, b, c) {
+    var soma = a + b + c;
+    var media = soma / 3;
+    return media;
+}
+
+
+function calcularQuandoClicadoNucleo() {
+    var selectElement = document.getElementById("nucleos");
+    var selectedOption = selectElement.value;
+    var a, b, c;
+
+    if (selectedOption === "dual-core") {
+        a = 100;
+        b = 200;
+        c = 300;
+    } else if (selectedOption === "quad-core") {
+        a = 400;
+        b = 500;
+        c = 600;
+    } else if (selectedOption === "octa-core") {
+        a = 400;
+        b = 600;
+        c = 800;
+    } 
+
+    var media = calcularMediaNucleo(a, b, c); 
+    document.getElementById("medianucleo").innerHTML = ("O valor médio da memória nesta configuração é:" + media);
+}
 
